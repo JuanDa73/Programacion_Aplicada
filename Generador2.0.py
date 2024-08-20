@@ -30,7 +30,7 @@ elif Tipo_Onda == "Sierra":
       PixelYS=(-6.4*AmplitudS)+64
       print('Amplitud de ',round(AmplitudS,3),' voltios; Pixel ',int(PixelYS),' en el eje Y')   
     else:
-      AmplitudS=(-Vpp*f)*(t-((f-1)/f))+(Vpp/2)+offset
+      AmplitudS=(-Vpp*f)*(t-int(t/Periodo)*Periodo)+(Vpp/2)+offset
       PixelYS=(-6.4*AmplitudS)+64
       print('Amplitud de ',round(AmplitudS,3),' voltios; Pixel ',int(PixelYS),' en el eje Y')  
 else:
